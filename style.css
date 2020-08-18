@@ -1,0 +1,611 @@
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: europa, "Yu Gothic", "ヒラギノ角ゴ ProN W3",
+    "Hiragino kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+h2 {
+  padding-top: 30px;
+  line-height: 45px;
+}
+
+.sp_br {
+  display: none;
+}
+
+/*------ヘッダーメニュー部分 ここから------*/
+
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+header .header_bg {
+  position: relative;
+}
+
+.header_bg input {
+  display: none;
+}
+
+header .flexbox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header_left .title {
+  color: #fff;
+  padding: 10px 0 0 40px;
+}
+
+.header_left .title .size_s {
+  font-size: 15px;
+  color: #919191;
+  padding-left: 140px;
+}
+.header_left .title .size_m {
+  font-size: 23px;
+  line-height: 25px;
+}
+.header_left .title .size_l {
+  font-size: 35px;
+  padding-left: 100px;
+  line-height: 37px;
+}
+
+.header_right {
+  padding: 30px;
+}
+
+.header_navi_wrap ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.header_navi_wrap li a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 0.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header_navi-wrap li span {
+  padding: 8px 16px;
+  background-color: #1167ce;
+  border-radius: 3px;
+}
+.header_navi-wrap li span i {
+  margin-left: 5px;
+}
+
+/*------メインジュアル部分 ここから------*/
+
+.main_visual {
+  background-image: url(images/img_001.jpg);
+  background-size: cover;
+  background-position: right top;
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.main_visual h1.main_title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffff1a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  text-shadow: 5px 5px 6px #333, -5px 5px 6px #333, 5px -5px 6px #333,
+    -5px -5px 6px #333, 5px 0px 6px #333, 0px 5px 6px #333, -5px 0px 6px #333,
+    0px -5px 6px #333;
+}
+
+/*------店舗紹介部分 ここから------*/
+
+.concept {
+  background-image: url(images/bg_1.jpg);
+  position: relative;
+  min-height: 100px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #000;
+}
+
+.concept_cover {
+  padding: 100px 0;
+}
+
+.concept h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #666;
+}
+
+.concept p {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+  font-size: 1.1rem;
+  line-height: 35px;
+}
+
+.concept .flexbox {
+  display: flex;
+  justify-content: space-around;
+}
+
+.concept .left {
+  background-image: url(images/img_002.jpg);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-position: center;
+}
+
+.concept .right {
+  background-image: url(images/img_003.jpg);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-position: center;
+}
+
+/*------メニュー部分 ここから------*/
+.menu {
+  background-image: url(images/menu_bg.jpg);
+  background-size: cover;
+  width: 100%;
+  min-height: 80vh;
+  padding: 80px 0;
+}
+
+.menu .menu_inner {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px 60px 50px 60px;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  padding: 20px 0;
+}
+
+.menu .menu_list ul li {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+  border-bottom: 2px dotted #000;
+}
+
+.menu .menu_list ul li:last-child {
+  margin-bottom: 50px;
+}
+
+.menu .menu_list ul li .menu_name {
+  text-align: left;
+}
+
+.menu .menu_list ul li .menu_price {
+  text-align: right;
+}
+
+.menu .menu_list ul li p .sp_br {
+  display: none;
+}
+
+/*------アクセス部分 ここから------*/
+
+.access {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/addr_bg.jpg);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: cover;
+  color: #000;
+  text-align: left;
+}
+
+.access_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.access .access_address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  min-height: 700px;
+  padding-bottom: 50px;
+}
+
+.access .access_inner {
+  width: 70%;
+}
+
+.access .access_inner h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.access .access_address dl {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.access .access_address dl dt {
+  padding: 0.5em 0 0.5em 14px;
+  width: 100px;
+  position: relative;
+  line-height: 20px;
+}
+
+.access .access_address dl dt:after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 2px;
+  background: #000;
+}
+
+.access .access_address dl dd {
+  width: calc(100% - 100px);
+  padding: 0.5em 0 0.5em 10px;
+}
+
+.access .access_address .tel {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.access .access_address .tel p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.access .access_address .tel a {
+  padding: 10px 40px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.access .access_address .tel a:hover {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+.access .access_map {
+  width: 50%;
+}
+
+/*------フッター部分 ここから------*/
+footer {
+  width: 100%;
+  background-color: #000;
+  padding: 30px;
+  text-align: center;
+}
+
+footer .footer_navi ul {
+  display: flex;
+  justify-content: center;
+  line-height: 18px;
+  padding-bottom: 20px;
+}
+
+footer .footer_navi li {
+  padding: 0 20px;
+  border-left: 2px solid #fff;
+}
+
+footer .footer_navi li:nth-child(1) {
+  border-left: none;
+}
+
+footer .footer_navi li a {
+  font-size: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer p {
+  font-size: 14px;
+  color: #707070;
+}
+
+/*-------「TOPに戻る」ボタン部分 ここから--------*/
+#page_top {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 60px;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  display: none;
+}
+
+/*------------------------------------*/
+/*-------レスポンシブ部分 ここから--------*/
+/*------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .sp_br {
+    display: block;
+  }
+
+  /*------ヘッダーメニュー部分(レスポンシブ) ここから------*/
+
+  header {
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(50, 50, 50, 1);
+  }
+
+  .header_bg {
+    height: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .header_bg .title .name {
+    padding-left: 0;
+  }
+
+  .header_left .title {
+    color: #fff;
+    padding: 0;
+  }
+
+  .header_left .title .size_s {
+    font-size: 15px;
+    color: #919191;
+  }
+  .header_left .title .size_m {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .header_left .title .size_l {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  /*------ヘッダーハンバーガーメニュー ここから------*/
+
+  .header_bg label {
+    display: block;
+  }
+
+  .header_bg label {
+    position: absolute;
+    right: 10px;
+    clear: both;
+  }
+
+  .header_bg .hamburger_icon {
+    display: inline-block;
+    width: 35px;
+    height: 25px;
+  }
+
+  .header_bg .hamburger_icon i {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header_bg .hamburger_icon i:nth-child(1) {
+    top: 0;
+  }
+
+  .header_bg .hamburger_icon i:nth-child(2) {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+  }
+
+  .header_bg .hamburger_icon i:nth-child(3) {
+    bottom: 0;
+  }
+
+  .header_bg input:checked + label span.hamburger_icon i:nth-child(1) {
+    margin: auto;
+    transform: rotate(45deg);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .header_bg input:checked + label span.hamburger_icon i:nth-child(2) {
+    transform: rotateX(90deg);
+    top: 0;
+    bottom: 0;
+  }
+
+  .header_bg input:checked + label span.hamburger_icon i:nth-child(3) {
+    margin: auto;
+    transform: rotate(-45deg);
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .header_bg input:checked ~ .header_right {
+    z-index: 100;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .header_right {
+    position: fixed;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 80px;
+    right: 0;
+    transform: translateX(100%);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s ease-out;
+  }
+  .header_navi_wrap {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition-duration: 1s;
+    transition-property: right;
+    overflow-y: scroll;
+  }
+
+  .header_bg input:checked ~ .header_right .header_navi_wrap {
+    right: 0;
+  }
+
+  .header_navi_wrap ul {
+    margin: 0;
+    display: block;
+    justify-content: inherit;
+  }
+
+  .header_navi_item {
+    border-bottom: 1px solid #000;
+  }
+
+  .header_navi_wrap li a {
+    padding: 0 50px;
+    color: #000;
+    font-size: 24px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 1;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  /*------メインジュアル部分(レスポンシブ) ここから------*/
+
+  .main_visual {
+    margin-top: 80px;
+  }
+
+  .main_visual h1.main_title {
+    font-size: 2.2rem;
+    white-space: nowrap;
+  }
+
+  /*------店舗紹介部分(レスポンシブ) ここから------*/
+  .concept_cover {
+    padding: 40px 0;
+  }
+  .concept p {
+    width: 90%;
+  }
+
+  /*------メニュー部分(レスポンシブ) ここから------*/
+
+  .menu .menu_inner {
+    padding: 10px 0;
+    width: 95%;
+  }
+
+  .menu .menu_list ul li {
+    display: block;
+    line-height: 25px;
+    padding: 5px;
+  }
+
+  /*------アクセス部分(レスポンシブ) ここから------*/
+  .access_wrap {
+    display: block;
+  }
+
+  .access .access_address {
+    width: 100%;
+  }
+
+  .access .access_inner {
+    width: 90%;
+  }
+
+  .access .access_address dl dt {
+    width: 80px;
+  }
+
+  .access .access_address dl dd {
+    width: calc(100% - 80px);
+  }
+
+  .access .access_map {
+    width: 100%;
+    height: 300px;
+  }
+
+  /*------フッター部分(レスポンシブ) ここから------*/
+  footer nav.footer_navi {
+    display: none;
+  }
+
+  /*-------「TOPに戻る」ボタン部分 ここから--------*/
+  #page_top {
+    font-size: 0.8rem;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
