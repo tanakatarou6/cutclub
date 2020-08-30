@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  font-family: europa, "Yu Gothic", "ヒラギノ角ゴ ProN W3",
-    "Hiragino kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino kaku Gothic ProN", "メイリオ",
+    Meiryo, sans-serif;
 }
 
 .container {
@@ -97,7 +97,7 @@ header .flexbox {
 /*------メインジュアル部分 ここから------*/
 
 .main_visual {
-  background-image: url(images/img_001.jpg);
+  background-image: url(images/main_v.jpg);
   background-size: cover;
   background-position: right top;
   width: 100%;
@@ -123,7 +123,7 @@ header .flexbox {
     0px -5px 6px #333;
 }
 
-/*------店舗紹介部分 ここから------*/
+/*------ごあいさつ部分 ここから------*/
 
 .concept {
   background-image: url(images/bg_1.jpg);
@@ -175,9 +175,37 @@ header .flexbox {
   background-position: center;
 }
 
+.concept .photo {
+  padding-top: 60px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.concept .photo ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.concept .photo ul li {
+  width: 25%;
+  padding: 0 8px 8px 0;
+  overflow: hidden;
+}
+
+.concept .photo ul li:last-child {
+  padding-right: 0;
+}
+
+.concept .photo ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*------メニュー部分 ここから------*/
 .menu {
-  background-image: url(images/menu_bg.jpg);
+  background-image: url(images/bg_4.jpg);
   background-size: cover;
   width: 100%;
   min-height: 80vh;
@@ -194,7 +222,7 @@ header .flexbox {
 
 .menu h2 {
   font-size: 2rem;
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 
 .menu .menu_list ul li {
@@ -202,6 +230,7 @@ header .flexbox {
   justify-content: space-between;
   line-height: 50px;
   border-bottom: 2px dotted #000;
+  position: relative;
 }
 
 .menu .menu_list ul li:last-child {
@@ -216,8 +245,51 @@ header .flexbox {
   text-align: right;
 }
 
-.menu .menu_list ul li p .sp_br {
-  display: none;
+.menu .menu_list ul li .menu_price::after {
+  content: "(税込)";
+}
+
+.menu .menu_list ul li:last-child::after {
+  content: "価格は全て税込み価格です";
+  position: absolute;
+  right: 0;
+  top: 2.5rem;
+}
+
+/*------スケジュール&お知らせ部分 ここから------*/
+
+.info {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/bg_3.jpg);
+  background-color: #f0f8ff;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #000;
+  text-align: left;
+  padding: 80px 0;
+}
+
+.info h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+.info_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .info_cal {
+  width: 60%;
+  height: 100%;
+  margin-right: 40px;
+}
+
+.info .info_twitter {
+  width: 40%;
+  height: 100%;
 }
 
 /*------アクセス部分 ここから------*/
@@ -225,7 +297,7 @@ header .flexbox {
 .access {
   width: 100%;
   height: 100%;
-  background-image: url(images/addr_bg.jpg);
+  background-image: url(images/bg_2.jpg);
   background-color: rgba(0, 0, 0, 0.8);
   background-size: cover;
   color: #000;
@@ -555,6 +627,17 @@ footer p {
     width: 90%;
   }
 
+  .concept .photo {
+    padding-top: 20px;
+  }
+
+  .concept .photo ul li {
+    width: 50%;
+  }
+
+  .concept .photo ul li:nth-child(2n) {
+    padding-right: 0;
+  }
   /*------メニュー部分(レスポンシブ) ここから------*/
 
   .menu .menu_inner {
@@ -566,6 +649,38 @@ footer p {
     display: block;
     line-height: 25px;
     padding: 5px;
+  }
+
+  .menu .menu_list ul li:last-child::after {
+    content: "価格は全て税込み価格です";
+    position: absolute;
+    right: 0;
+    top: 4rem;
+  }
+
+  /*------スケジュール&お知らせ部分(レスポンシブ) ここから------*/
+  .info_wrap {
+    display: block;
+  }
+
+  .info .info_cal {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .info_cal,
+  .info_twitter {
+    text-align: center;
+  }
+
+  .info .info_cal iframe {
+    width: 95%;
+    height: 400px;
+  }
+
+  .info .info_twitter {
+    width: 80%;
+    margin: 0 auto;
   }
 
   /*------アクセス部分(レスポンシブ) ここから------*/
@@ -591,7 +706,7 @@ footer p {
 
   .access .access_map {
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
 
   /*------フッター部分(レスポンシブ) ここから------*/
