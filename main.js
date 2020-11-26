@@ -4,7 +4,7 @@ $(function () {
   //---------------------------------
   $("header a,footer a").click(function () {
     // 移動先の位置調整。設定したpxだけ下にずれる。
-    let adjust = -50;
+    let adjust = 0;
     // スクロール速度(ミリ秒)
     let speed = 500;
     // アンカーの取得。リンク先(href)を取得して変数に代入
@@ -39,6 +39,28 @@ $(function () {
   $pageTop.click(function () {
     $("html,body").animate({ scrollTop: 0 }, 500);
     return false;
+  });
+
+  //---------------------------------
+  //----ヘッダーナビスライド------------
+  //---------------------------------
+  // 直前の縦方向スクロール値
+  let startPos = 0;
+  // 現在の縦方向スクロール値
+  let nowScrollPos = 0;
+  // ヘッダーが隠されるまでの最上部からのスクロール値
+  let hidePos = 200;
+  $(window).on("scroll", function () {
+    nowScrollPos = $(this).scrollTop();
+    // スクロールされる度、上下のどちらにスクロールしたか判断
+    if (nowScrollPos >= startPos) {
+      if (startPos >= hidePos) {
+        $(".site_header").addClass("hide");
+      }
+    } else {
+      $(".site_header").removeClass("hide");
+    }
+    startPos = nowScrollPos;
   });
 
   //---------------------------------

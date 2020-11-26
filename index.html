@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+  <head
+    prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"
+  >
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="新潟市の理髪店です。大人から子供までどなたでも気軽に来店できる雰囲気のお店です。"
+    />
+    <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    <meta
+      name="keywords"
+      content="カットクラブ,かりゅうど,狩人,かっとくらぶ,床屋,新潟市,理髪店,男性"
+    />
+    <meta property="og:url" content="https://cckaryuudo.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="カット倶楽部 刈流人" />
+    <meta
+      property="og:description"
+      content="新潟市にある理髪店「カット倶楽部 刈流人」です。大人から子供まで気軽に来店できる雰囲気のお店です。"
+    />
+    <meta
+      property="og:image"
+      content="https://cckaryuudo.com/images/main_v.jpg"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -20,14 +44,15 @@
 
   <body>
     <!--------ヘッダーメニュー 部分-------->
-    <header>
+    <header class="site_header">
       <div class="header_bg">
         <div class="flexbox">
           <div class="header_left">
             <div class="title">
-              <p class="size_m name">カット倶楽部</p>
+              <a href="index.html"><img src="images/logo.png" /></a>
+              <!-- <p class="size_m name">カット倶楽部</p>
               <p class="size_l name">刈流人</p>
-              <p class="size_s name">かりゅうど</p>
+              <p class="size_s name">かりゅうど</p> -->
             </div>
           </div>
           <input type="checkbox" id="hamburger" />
@@ -43,10 +68,16 @@
               <ul class="header_navi_list">
                 <li class="header_navi_item"><a href="index.html">HOME</a></li>
                 <li class="header_navi_item"><a href="#menu">メニュー</a></li>
-                <li class="header_navi_item">
-                  <a href="#info">スケジュール</a>
-                </li>
+                <li class="header_navi_item"><a href="#info">営業案内</a></li>
                 <li class="header_navi_item"><a href="#access">店舗案内</a></li>
+                <li class="header_navi_item access_link">
+                  <a href="#access">
+                    営業時間<br />
+                    平日 9:00〜19:00<br />
+                    土日祝 8:30~18:30<br />
+                    定休日あり
+                  </a>
+                </li>
               </ul>
             </div>
           </nav>
@@ -55,9 +86,7 @@
     </header>
 
     <!--------メインビジュアル 部分-------->
-    <div class="main_visual">
-      <h1 class="main_title">カット倶楽部 刈流人</h1>
-    </div>
+    <div class="main_visual"></div>
 
     <!--------ごあいさつ 部分-------->
     <div class="concept">
@@ -69,12 +98,16 @@
             刈流人のホームページをご覧いただきありがとうございます。<br />
             <br />
             当店は幅広い年代のお客様にご満足いただけるお店を目指しています。<br />
-            席数は全部で4席、他のお客様の目が気にならない「半個室」も1席ご用意しています。<br />
+            席数は全部で3席、3席すべて他のお客様の目が気にならない半個室となっています。<br />
+            <br />
+            座席は間仕切りで区切られておりますので、お客様同士の距離が近くなる事はございません。<br />
+            また、検温や定期的なアルコールによる消毒を徹底しており、新型コロナウィルス対策も万全です。<br />
             <br />
             お客様一人一人の髪のクセやボリュームにあったデザインやヘアスタイルのご提案、アドバイスさせていただきます。<br />
+            明るく気さくなスタッフばかりですので、髪のお悩みやヘアスタイルの相談などお気軽にご相談ください。<br />
             <br />
             当店は予約優先制です、事前のご予約で待ち時間なくご利用いただけます。<br />
-            明るく気さくなスタッフばかりですので、髪のお悩みやヘアスタイルの相談などお気軽にご相談ください。
+            ご予約なしのお客様も大歓迎です。<br />
           </p>
           <div class="photo">
             <ul>
@@ -104,24 +137,40 @@
           <div class="menu_list">
             <ul>
               <li>
-                <p class="menu_name">カット(カット+顔そり+シャンプー)</p>
-                <p class="menu_price">4,400円&nbsp;&nbsp;&nbsp;</p>
+                <p class="menu_name">
+                  カット<br class="sp_br" />(カット+顔そり+シャンプー)
+                </p>
+                <p class="menu_price">4,400円</p>
               </li>
               <li>
-                <p class="menu_name">高校生カット(カット+顔そり+シャンプー)</p>
-                <p class="menu_price">4,180円&nbsp;&nbsp;&nbsp;</p>
+                <p class="menu_name">
+                  大学生カット<br class="sp_br" />(カット+顔そり+シャンプー)
+                </p>
+                <p class="menu_price">4,180円</p>
               </li>
               <li>
-                <p class="menu_name">中学生カット(カット+顔そり+シャンプー)</p>
-                <p class="menu_price">3,300円&nbsp;&nbsp;&nbsp;</p>
+                <p class="menu_name">
+                  高校生カット<br class="sp_br" />(カット+顔そり+シャンプー)
+                </p>
+                <p class="menu_price">3,850円</p>
               </li>
               <li>
-                <p class="menu_name">お子様カット(カット+シャンプー)</p>
-                <p class="menu_price">2,750円&nbsp;&nbsp;&nbsp;</p>
+                <p class="menu_name">
+                  中学生カット<br class="sp_br" />(カット+顔そり+シャンプー)
+                </p>
+                <p class="menu_price">3,300円</p>
               </li>
               <li>
-                <p class="menu_name">レディースカット(カット+シャンプー)</p>
-                <p class="menu_price">3,850円&nbsp;&nbsp;&nbsp;</p>
+                <p class="menu_name">
+                  お子様カット<br class="sp_br" />(カット+顔そり+シャンプー)
+                </p>
+                <p class="menu_price">2,750円</p>
+              </li>
+              <li>
+                <p class="menu_name">
+                  レディースカット<br class="sp_br" />(カット+シャンプー)
+                </p>
+                <p class="menu_price">3,850円</p>
               </li>
             </ul>
           </div>
@@ -137,37 +186,12 @@
                 <p class="menu_price">4,180円〜</p>
               </li>
               <li>
-                <p class="menu_name">アイパー(カット込み)</p>
-                <p class="menu_price">7,700円&nbsp;&nbsp;&nbsp;</p>
-              </li>
-              <li>
                 <p class="menu_name">パーマ</p>
                 <p class="menu_price">7,150円〜</p>
               </li>
               <li>
                 <p class="menu_name">ストレートパーマ</p>
                 <p class="menu_price">13,200円〜</p>
-              </li>
-            </ul>
-          </div>
-          <h2>その他メニュー</h2>
-          <div class="menu_list">
-            <ul>
-              <li>
-                <p class="menu_name">ハンドマッサージ</p>
-                <p class="menu_price">プラス1,100円〜</p>
-              </li>
-              <li>
-                <p class="menu_name">ブラッシング</p>
-                <p class="menu_price">プラス550円〜</p>
-              </li>
-              <li>
-                <p class="menu_name">リンパマッサージ</p>
-                <p class="menu_price">プラス550円〜</p>
-              </li>
-              <li>
-                <p class="menu_name">パック</p>
-                <p class="menu_price">プラス550円〜</p>
               </li>
             </ul>
           </div>
@@ -182,8 +206,8 @@
           <h2>スケジュール</h2>
           <div class="info_inner">
             <iframe
-              src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=cTcxYzZhb25lMGUxc2QwbnV1dHBzNW9sNzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23F6BF26&amp;color=%230B8043&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0"
-              style="border: solid 1px #ddd;"
+              src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=dmhidjkwMmNqczM3MjFtcDVtbWU5N2U3bDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23E4C441&amp;color=%230B8043&amp;title=%E3%82%AB%E3%83%83%E3%83%88%E5%80%B6%E6%A5%BD%E9%83%A8%20%E5%88%88%E6%B5%81%E4%BA%BA&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;showPrint=0"
+              style="border: solid 1px #ddd"
               width="100%"
               height="500px"
               frameborder="0"
@@ -198,8 +222,8 @@
             data-width="400"
             data-height="500"
             data-theme="light"
-            href="https://twitter.com/konotarogomame?ref_src=twsrc%5Etfw"
-            >Tweets by konotarogomame</a
+            href="https://twitter.com/cc_karyuudo?ref_src=twsrc%5Etfw"
+            >Tweets by cc_karyuudo</a
           >
           <script
             async
@@ -249,7 +273,7 @@
             width="100%"
             height="100%"
             frameborder="0"
-            style="border: 0;"
+            style="border: 0"
             allowfullscreen=""
             aria-hidden="false"
             tabindex="0"
@@ -265,7 +289,7 @@
           <ul class="footer_navi_list">
             <li class="footer_navi_item"><a href="index.html">HOME</a></li>
             <li class="footer_navi_item"><a href="#menu">メニュー</a></li>
-            <li class="header_navi_item"><a href="#info">スケジュール</a></li>
+            <li class="header_navi_item"><a href="#info">営業案内</a></li>
             <li class="header_navi_item"><a href="#access">店舗案内</a></li>
           </ul>
         </nav>
@@ -274,7 +298,14 @@
           Reserved.
         </p>
       </div>
+      <div class="banner">
+        <a href="https://www.hairnavi.net/" target="_blank"
+          ><img src="images/hair_logo.png"
+        /></a>
+      </div>
     </footer>
+
+    <!--------スムーススクロールエリア-------->
     <div id="page_top">TOP</div>
 
     <!--------scriptエリア-------->

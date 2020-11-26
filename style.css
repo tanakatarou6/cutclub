@@ -1,4 +1,4 @@
-html {
+.menu_list {
   font-size: 20px;
 }
 
@@ -25,9 +25,13 @@ h2 {
 
 header {
   width: 100%;
+  height: 100px;
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(50, 50, 50, 1);
+  z-index: 100;
+  transition: 0.3s;
 }
 
 header .header_bg {
@@ -41,32 +45,19 @@ header .header_bg {
 header .flexbox {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
+  white-space: nowrap;
 }
 
 .header_left .title {
   color: #fff;
-  padding: 10px 0 0 40px;
+  padding-left: 20px;
 }
 
-.header_left .title .size_s {
-  font-size: 15px;
-  color: #919191;
-  padding-left: 140px;
-}
-.header_left .title .size_m {
-  font-size: 23px;
-  line-height: 25px;
-}
-.header_left .title .size_l {
-  font-size: 35px;
-  padding-left: 100px;
-  line-height: 37px;
-}
-
-.header_right {
-  padding: 30px;
+header .title img {
+  height: 90px;
+  object-fit: cover;
 }
 
 .header_navi_wrap ul {
@@ -79,10 +70,24 @@ header .flexbox {
 .header_navi_wrap li a {
   display: inline-block;
   text-decoration: none;
-  margin: 0 20px;
-  font-size: 0.8rem;
+  padding: 0 24px;
+  line-height: 100px;
   color: #fff;
   cursor: pointer;
+}
+
+.header_navi_wrap li a:hover {
+  color: #bbb;
+}
+
+.header_navi_wrap li {
+  border-left: 2px solid #eee;
+}
+
+.header_navi_wrap li.access_link a {
+  padding: 0 24px;
+  color: #fff;
+  line-height: 24px;
 }
 
 .header_navi-wrap li span {
@@ -92,6 +97,21 @@ header .flexbox {
 }
 .header_navi-wrap li span i {
   margin-left: 5px;
+}
+
+/*-------ヘッダーナビスライド ここから--------*/
+.site_header.hide {
+  transform: translateY(-100%);
+}
+
+.site_header::after {
+  content: "予約優先 025-266−6311";
+  position: absolute;
+  right: 10px;
+  top: 110px;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 30px;
 }
 
 /*------メインジュアル部分 ここから------*/
@@ -107,20 +127,7 @@ header .flexbox {
   top: 0;
   left: 0;
   z-index: -2;
-}
-
-.main_visual h1.main_title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #ffff1a;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-block;
-  text-shadow: 5px 5px 6px #333, -5px 5px 6px #333, 5px -5px 6px #333,
-    -5px -5px 6px #333, 5px 0px 6px #333, 0px 5px 6px #333, -5px 0px 6px #333,
-    0px -5px 6px #333;
+  margin-top: 100px; /*headerをfixedにした分ずらす用*/
 }
 
 /*------ごあいさつ部分 ここから------*/
@@ -159,22 +166,6 @@ header .flexbox {
   justify-content: space-around;
 }
 
-.concept .left {
-  background-image: url(images/img_002.jpg);
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-position: center;
-}
-
-.concept .right {
-  background-image: url(images/img_003.jpg);
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-position: center;
-}
-
 .concept .photo {
   padding-top: 60px;
   width: 80%;
@@ -205,18 +196,19 @@ header .flexbox {
 
 /*------メニュー部分 ここから------*/
 .menu {
-  background-image: url(images/bg_4.jpg);
+  background-image: url(images/bg_2.jpg);
   background-size: cover;
   width: 100%;
   min-height: 80vh;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .menu .menu_inner {
   background-color: rgba(255, 255, 255, 0.6);
   width: 70%;
+  min-width: 660px;
   margin: 0 auto;
-  padding: 30px 60px 50px 60px;
+  padding: 30px 60px 50px;
   text-align: center;
 }
 
@@ -246,14 +238,7 @@ header .flexbox {
 }
 
 .menu .menu_list ul li .menu_price::after {
-  content: "(税込)";
-}
-
-.menu .menu_list ul li:last-child::after {
-  content: "価格は全て税込み価格です";
-  position: absolute;
-  right: 0;
-  top: 2.5rem;
+  content: " (税込)";
 }
 
 /*------スケジュール&お知らせ部分 ここから------*/
@@ -267,7 +252,7 @@ header .flexbox {
   background-attachment: fixed;
   color: #000;
   text-align: left;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .info h2 {
@@ -297,7 +282,7 @@ header .flexbox {
 .access {
   width: 100%;
   height: 100%;
-  background-image: url(images/bg_2.jpg);
+  background-image: url(images/bg_4.jpg);
   background-color: rgba(0, 0, 0, 0.8);
   background-size: cover;
   color: #000;
@@ -314,8 +299,7 @@ header .flexbox {
   justify-content: center;
   align-items: center;
   width: 50%;
-  min-height: 700px;
-  padding-bottom: 50px;
+  padding: 100px 0 50px;
 }
 
 .access .access_inner {
@@ -422,6 +406,30 @@ footer p {
   color: #707070;
 }
 
+footer {
+  position: relative;
+}
+
+footer .banner {
+  position: absolute;
+  bottom: 30px;
+  left: 16px;
+}
+
+footer .banner img {
+  width: 120px;
+  object-fit: cover;
+  padding: 4px 12px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  background-color: rgba(30, 30, 30, 0.7);
+  transition: all 0.3s;
+}
+
+footer .banner img:hover {
+  background-color: #3d3d3d;
+}
+
 /*-------「TOPに戻る」ボタン部分 ここから--------*/
 #page_top {
   position: fixed;
@@ -474,6 +482,11 @@ footer p {
     padding: 0;
   }
 
+  header .title img {
+    height: 80px;
+    object-fit: cover;
+  }
+
   .header_left .title .size_s {
     font-size: 15px;
     color: #919191;
@@ -486,6 +499,21 @@ footer p {
     font-size: 15px;
     line-height: 20px;
   }
+
+  .header_navi_wrap li.access_link {
+    display: none;
+  }
+
+  /*-------ヘッダーナビスライド(レスポンシブ) ここから--------*/
+  .site_header.hide {
+    transform: none;
+  }
+  /* レスポンシブでは自動的にメニューが隠れないようにする */
+
+  .site_header::after {
+    display: none;
+  }
+  /* レスポンシブでは画面右上のTELは非表示 */
 
   /*------ヘッダーハンバーガーメニュー ここから------*/
 
@@ -561,7 +589,7 @@ footer p {
     position: fixed;
     opacity: 0;
     background-color: rgba(255, 255, 255, 0.7);
-    top: 80px;
+    top: 100px;
     right: 0;
     transform: translateX(100%);
     bottom: 0;
@@ -617,6 +645,7 @@ footer p {
   .main_visual h1.main_title {
     font-size: 2.2rem;
     white-space: nowrap;
+    display: none;
   }
 
   /*------店舗紹介部分(レスポンシブ) ここから------*/
@@ -642,7 +671,7 @@ footer p {
 
   .menu .menu_inner {
     padding: 10px 0;
-    width: 95%;
+    min-width: 95%;
   }
 
   .menu .menu_list ul li {
@@ -652,8 +681,6 @@ footer p {
   }
 
   .menu .menu_list ul li:last-child::after {
-    content: "価格は全て税込み価格です";
-    position: absolute;
     right: 0;
     top: 4rem;
   }
@@ -684,6 +711,7 @@ footer p {
   }
 
   /*------アクセス部分(レスポンシブ) ここから------*/
+
   .access_wrap {
     display: block;
   }
@@ -711,6 +739,10 @@ footer p {
 
   /*------フッター部分(レスポンシブ) ここから------*/
   footer nav.footer_navi {
+    display: none;
+  }
+
+  footer .banner {
     display: none;
   }
 
