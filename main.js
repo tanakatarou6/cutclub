@@ -69,11 +69,4 @@ $(function () {
   $("header a").click(function () {
     $('input[type="checkbox"]').prop("checked", false);
   });
-
-  //---------------------------------
-  //----Googleカレンダーの背景色変更用---
-  //---------------------------------
-  $(function () {
-    console.log($("#info_inner").find("body"));
-  });
 });
